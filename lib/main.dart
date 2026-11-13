@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
+import 'package:percipio_practice_2/widgets/like_us_button.dart';
 
 void main() {
   runApp(MyStore());
@@ -55,14 +56,7 @@ class MyStore extends StatelessWidget {
             ),
           ],
         ),
-        floatingActionButton: FloatingActionButton(
-          tooltip: 'Add item',
-          onPressed: () {
-            debugPrint('Added item!');
-          },
-
-          child: const Icon(Icons.add),
-        ),
+        floatingActionButton: LikeUsButton(),
 
         bottomNavigationBar: BottomAppBar(
           color: Color.fromARGB(200, 250, 150, 214),
