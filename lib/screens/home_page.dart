@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     timer = Timer.periodic(Duration(milliseconds: (1000 * _loopTime).toInt()), (
-      Timer timer,
+      Timer currentTimer,
     ) {
       setState(() {
         isAmber = !isAmber;
@@ -28,10 +28,46 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+   @override
+  void dispose() {
+    timer?.cancel();
+    super.dispose();
+  }
+
+/*   ///dispose()
+C'est une méthode du cycle de vie de State.
+
+Elle est appelée lorsque Flutter retire définitivement ce State de l'arbre des widgets.
+timer?.cancel()
+Le ? est ici un opérateur d'accès conditionnel.
+
+Il signifie :
+
+« Si timer n'est pas null, appelle sa méthode cancel(). Sinon, ne fais rien. »
+
+C'est équivalent à :
+if (timer != null) {
+  timer!.cancel();
+}
+
+La méthode cancel() arrête le Timer.
+
+Pourquoi est-ce indispensable ?
+
+Imagine que l'utilisateur quitte ton écran alors que le Timer continue de fonctionner.
+
+Il pourrait encore essayer d'exécuter :
+setState(() {
+  isAmber = !isAmber;
+});
+
+Or, ton widget n'existe plus. */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'Insta Stores',
           style: TextStyle(fontWeight: FontWeight.bold),
@@ -100,11 +136,22 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      endDrawer: const Drawer(
+
+      drawer: Drawer(
         child: Center(
-          child: Text('My Profile!', style: TextStyle(fontSize: 20)),
+          child: Column(
+            children: [
+              Text('My Profile!', style: TextStyle(fontSize: 20)),
+              Container(
+                width: 200,
+                height: 200,
+                color: isAmber ? Colors.amber : Colors.blueGrey,
+              ),
+            ],
+          ),
         ),
       ),
+
       drawerScrimColor: Colors.transparent,
     );
   }
