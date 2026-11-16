@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Insta Store',
+          'Insta Stores',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         //centerTitle: true,
