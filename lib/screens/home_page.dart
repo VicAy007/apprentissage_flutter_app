@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:material_ui/material_ui.dart';
 import 'package:percipio_practice_2/widgets/like_us_button.dart';
 
@@ -11,57 +9,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final double _loopTime = 4;
-  bool isAmber = false;
-
-  Timer? timer;
-
-  @override
-  void initState() {
-    super.initState();
-    timer = Timer.periodic(Duration(milliseconds: (1000 * _loopTime).toInt()), (
-      Timer currentTimer,
-    ) {
-      setState(() {
-        isAmber = !isAmber;
-      });
-    });
-  }
-
-   @override
-  void dispose() {
-    timer?.cancel();
-    super.dispose();
-  }
-
-/*   ///dispose()
-C'est une méthode du cycle de vie de State.
-
-Elle est appelée lorsque Flutter retire définitivement ce State de l'arbre des widgets.
-timer?.cancel()
-Le ? est ici un opérateur d'accès conditionnel.
-
-Il signifie :
-
-« Si timer n'est pas null, appelle sa méthode cancel(). Sinon, ne fais rien. »
-
-C'est équivalent à :
-if (timer != null) {
-  timer!.cancel();
-}
-
-La méthode cancel() arrête le Timer.
-
-Pourquoi est-ce indispensable ?
-
-Imagine que l'utilisateur quitte ton écran alors que le Timer continue de fonctionner.
-
-Il pourrait encore essayer d'exécuter :
-setState(() {
-  isAmber = !isAmber;
-});
-
-Or, ton widget n'existe plus. */
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -140,14 +88,7 @@ Or, ton widget n'existe plus. */
       drawer: Drawer(
         child: Center(
           child: Column(
-            children: [
-              Text('My Profile!', style: TextStyle(fontSize: 20)),
-              Container(
-                width: 200,
-                height: 200,
-                color: isAmber ? Colors.amber : Colors.blueGrey,
-              ),
-            ],
+            children: [Text('My Profile!', style: TextStyle(fontSize: 20))],
           ),
         ),
       ),

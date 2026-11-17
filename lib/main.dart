@@ -1,6 +1,5 @@
 import 'package:material_ui/material_ui.dart';
-
-import 'screens/home_page.dart';
+import 'package:percipio_practice_2/screens/slider_page.dart';
 
 void main() {
   runApp(MyStore());
@@ -18,7 +17,7 @@ class MyStore extends StatelessWidget {
         brightness: Brightness.light,
         primarySwatch: Colors.blueGrey,
       ),
-      home: const HomePage(),
+      home: SliderPage(),
     );
   }
 }
