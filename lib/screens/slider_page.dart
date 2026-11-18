@@ -42,6 +42,18 @@ class _SliderPageState extends State<SliderPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Slider(
+            activeColor: Colors.black,
+            value: _looptime,
+            max: 15,
+            min: 0,
+            onChanged: (value) {
+              setState(() {
+                _looptime = value;
+              });
+            },
+          ),
+          Text(_looptime.toString()),
           const Expanded(
             child: Center(
               child: Text(
@@ -56,14 +68,7 @@ class _SliderPageState extends State<SliderPage> {
               ),
             ),
           ),
-          /* Slider(
-            value: _loopTime,
-            onChanged: (value) {
-              setState(() {
-                _loopTime = value;
-              });
-            },
-          ), */
+         
         ],
       ),
     );

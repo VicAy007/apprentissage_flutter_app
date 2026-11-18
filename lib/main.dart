@@ -1,5 +1,6 @@
 import 'package:material_ui/material_ui.dart';
-import 'package:percipio_practice_2/screens/slider_page.dart';
+//import 'package:percipio_practice_2/screens/slider_page.dart';
+import 'package:percipio_practice_2/screens/third_page.dart';
 
 void main() {
   runApp(MyStore());
@@ -17,7 +18,7 @@ class MyStore extends StatelessWidget {
         brightness: Brightness.light,
         primarySwatch: Colors.blueGrey,
       ),
-      home: SliderPage(),
+      home: ThirdPage(title: 'Category promotion emails'),
     );
   }
 }
