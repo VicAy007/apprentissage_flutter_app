@@ -17,6 +17,10 @@ class _ThirdPageState extends State<ThirdPage> {
     'Personal': false,
     'Community': false,
   };
+
+  List<bool?> get checkedBox =>
+      checkLists.values.where((a) => a == true).toList();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,6 +66,14 @@ class _ThirdPageState extends State<ThirdPage> {
                     )
                     .toList(),
               ),
+            ),
+          ),
+          Text(
+            'Categories sélectionnée: ${checkedBox.length}/${checkLists.length}',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              color: Colors.blueAccent,
             ),
           ),
 
