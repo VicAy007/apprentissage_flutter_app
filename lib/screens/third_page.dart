@@ -20,7 +20,14 @@ class _ThirdPageState extends State<ThirdPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title), centerTitle: true),
+      appBar: AppBar(
+        title: Text(
+          widget.title,
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.lightBlue,
+      ),
       body: Column(
         children: [
           Container(
@@ -79,6 +86,7 @@ class _ThirdPageState extends State<ThirdPage> {
                       (taskName) => ShoppingCard(
                         chore: taskName,
                         on: checkLists[taskName]!,
+                        name: taskName,
                       ),
                     )
                     .toList(),

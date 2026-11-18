@@ -1,10 +1,16 @@
 import 'package:material_ui/material_ui.dart';
 
 class ShoppingCard extends StatelessWidget {
-  const ShoppingCard({super.key, this.on = true, this.chore = ''});
+  const ShoppingCard({
+    super.key,
+    this.on = true,
+    this.chore = '',
+    this.name = '',
+  });
 
   final bool on;
   final String chore;
+  final String name;
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +32,11 @@ class ShoppingCard extends StatelessWidget {
               size: 100.0,
               color: on ? Colors.green : Colors.grey,
             ),
+          ),
+          SizedBox(height: 10),
+          Text(
+            name,
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
           ),
         ],
       ),
