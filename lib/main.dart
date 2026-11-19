@@ -1,5 +1,6 @@
 import 'package:material_ui/material_ui.dart';
-import 'package:percipio_practice_2/screens/stack_page.dart';
+import 'package:percipio_practice_2/screens/listview_page.dart';
+
 
 void main() {
   runApp(MyStore());
@@ -17,7 +18,7 @@ class MyStore extends StatelessWidget {
         brightness: Brightness.light,
         primarySwatch: Colors.blueGrey,
       ),
-      home: StackPage(title: 'Insta Stores'),
+      home: ListviewPage(),
     );
   }
 }
