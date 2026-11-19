@@ -28,7 +28,7 @@ class StackPage extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey,
-                      blurRadius: 10.0,
+                      blurRadius: 25.0,
                       spreadRadius: 3.0,
                       offset: Offset(10.0, 10.0),
                     ),
@@ -47,8 +47,8 @@ class StackPage extends StatelessWidget {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey,
-                      blurRadius: 10.0,
-                      spreadRadius: 3.0,
+                      blurRadius: 25.0,
+                      spreadRadius: 1.0,
                       offset: Offset(10.0, 10.0),
                     ),
                   ],
