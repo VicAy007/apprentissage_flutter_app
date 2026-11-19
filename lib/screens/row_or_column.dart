@@ -1,10 +1,9 @@
-import 'package:flutter/widgets.dart';
 import 'package:material_ui/material_ui.dart';
 
 class RowOrColumn extends StatelessWidget {
   const RowOrColumn({super.key});
 
-  @override
+  @override 
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
