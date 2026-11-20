@@ -1,6 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 
-import 'package:percipio_practice_2/screens/listview_page_2.dart';
+import 'package:percipio_practice_2/screens/list_tile_page_2.dart';
 
 void main() {
   runApp(MyStore());
@@ -18,7 +18,7 @@ class MyStore extends StatelessWidget {
         brightness: Brightness.light,
         primarySwatch: Colors.blueGrey,
       ),
-      home: ListviewPage2(),
+      home: ListTilePage2(),
     );
   }
 }
