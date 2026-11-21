@@ -27,6 +27,7 @@ class ListTilePage3 extends StatelessWidget {
                 'My Profile',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
+              subtitle: Text('Edit your profile'),
               trailing: Icon(Icons.keyboard_arrow_right),
             ),
             ListTile(
@@ -37,6 +38,7 @@ class ListTilePage3 extends StatelessWidget {
                 'Past Orders',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
+              subtitle: Text('View your past orders'),
               trailing: Icon(Icons.keyboard_arrow_right),
             ),
             ListTile(
@@ -47,6 +49,7 @@ class ListTilePage3 extends StatelessWidget {
                 'Account settings',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
+              subtitle: Text('Edit your account settings'),
               trailing: Icon(Icons.keyboard_arrow_right),
             ),
             ListTile(
@@ -57,6 +60,7 @@ class ListTilePage3 extends StatelessWidget {
                 'About',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
+              subtitle: Text('Learn about us'),
               trailing: Icon(Icons.keyboard_arrow_right),
             ),
             ListTile(
@@ -67,6 +71,7 @@ class ListTilePage3 extends StatelessWidget {
                 'Share',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
+              subtitle: Text('Lis us ? Share us !'),
               trailing: Icon(Icons.keyboard_arrow_right),
             ),
             ListTile(
@@ -77,6 +82,7 @@ class ListTilePage3 extends StatelessWidget {
                 'Contact Us',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
+              subtitle: Text('Have a query'),
               trailing: Icon(Icons.keyboard_arrow_right),
             ),
           ],
