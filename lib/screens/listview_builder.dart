@@ -32,7 +32,7 @@ List<Action> actions = [
   Action(
     image: 'images/profiles/Portrait4.png',
     title: 'About',
-    subtitle: 'Learn about us',
+    subtitle: 'Learn about us.',
   ),
   Action(
     image: 'images/profiles/Portrait5.png',
