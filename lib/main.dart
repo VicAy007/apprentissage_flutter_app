@@ -1,6 +1,5 @@
 import 'package:material_ui/material_ui.dart';
-
-import 'package:percipio_practice_2/screens/listview_builder.dart';
+import 'package:percipio_practice_2/screens/dismissible_widget_page.dart';
 
 void main() {
   runApp(MyStore());
@@ -18,7 +17,18 @@ class MyStore extends StatelessWidget {
         brightness: Brightness.light,
         primarySwatch: Colors.blueGrey,
       ),
-      home: ListviewBuilder(),
+      home: Scaffold(
+        backgroundColor: Colors.green[100],
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          title: const Text(
+            'Insta Store',
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          ),
+          centerTitle: true,
+        ),
+        body: const MySwipeList(),
+      ),
     );
   }
 }
