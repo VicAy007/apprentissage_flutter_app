@@ -7,7 +7,14 @@ class ListTilePage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.greenAccent,
-      appBar: AppBar(centerTitle: true, title: Text('Insta Store')),
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey,
+        centerTitle: true,
+        title: Text(
+          'Insta Store',
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        ),
+      ),
       body: ListView(
         children: ListTile.divideTiles(
           context: context,
@@ -16,7 +23,7 @@ class ListTilePage2 extends StatelessWidget {
               leading: Icon(Icons.man),
               title: Text(
                 'My Profile',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ),
             ListTile(
