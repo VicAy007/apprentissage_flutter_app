@@ -1,5 +1,5 @@
 import 'package:material_ui/material_ui.dart';
-import 'package:percipio_practice_2/screens/dismissible_widget_page.dart';
+import 'package:percipio_practice_2/screens/gridview_page.dart';
 
 void main() {
   runApp(MyStore());
@@ -27,7 +27,7 @@ class MyStore extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: const MySwipeList(),
+        body: const ProductsView(),
       ),
     );
   }
