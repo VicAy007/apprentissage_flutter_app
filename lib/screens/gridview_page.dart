@@ -57,7 +57,6 @@ class GridItem extends StatelessWidget {
       elevation: 2,
       child: Center(
         child: Column(
-          
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(product.title, style: const TextStyle(fontSize: 20)),
