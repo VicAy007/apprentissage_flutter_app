@@ -1,5 +1,5 @@
 import 'package:material_ui/material_ui.dart';
-import 'package:percipio_practice_2/screens/listview_page_2.dart';
+
 
 import 'dart:math';
 
@@ -10,7 +10,10 @@ class ProductsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(20.0),
+      crossAxisSpacing: 15,
+      mainAxisSpacing: 15,
+      scrollDirection: Axis.horizontal,
       children: List.generate(
         products.length,
         (index) => GridItem(product: products[index]),
@@ -40,6 +43,7 @@ class GridItem extends StatelessWidget {
   const GridItem({super.key, required this.product});
 
   Color getRandomColor() {
+
     Random random = Random();
 
     return Color.fromARGB(
