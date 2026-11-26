@@ -1,12 +1,12 @@
 import 'package:material_ui/material_ui.dart';
-
-import 'package:percipio_practice_2/screens/gridview_page2.dart';
+import 'package:percipio_practice_2/screens/infinite_scrolling_gridviewpage.dart';
 
 void main() {
   runApp(MyStore());
 }
 
 class MyStore extends StatelessWidget {
+  
   const MyStore({super.key});
 
   @override
@@ -28,8 +28,14 @@ class MyStore extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: const ProductsView2(),
+        body: const ProductsView4(),
       ),
     );
   }
 }
+
+
+
+
+
+

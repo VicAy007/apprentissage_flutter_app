@@ -11,7 +11,10 @@ class ProductsView2 extends StatelessWidget {
       crossAxisCount: 2,
       padding: const EdgeInsets.all(15.0),
 
-      children: [...images],
+      children: List.generate(
+        products.length,
+        ((index) => GridItem(product: products[index])),
+      ),
     );
   }
 }
@@ -39,20 +42,22 @@ final List<Image> images = [
   ),
 ];
 
+
+
 class Product {
   final String title;
-  final String subtitle;
+  final String image;
 
-  Product({required this.title, required this.subtitle});
+  Product({required this.title, required this.image});
 }
 
 List<Product> products = [
-  Product(title: 'Heels', subtitle: 'High heels'),
-  Product(title: 'Shoes', subtitle: 'White shoes'),
-  Product(title: 'Hat', subtitle: 'A warrior hat'),
-  Product(title: 'Book', subtitle: 'Some books'),
-  Product(title: 'Banana', subtitle: 'Fresh Fruits'),
-  Product(title: 'Bag', subtitle: 'A bag'),
+  Product(title: 'Heels', image: 'images/heels.jpg'),
+  Product(title: 'Shoes', image: 'images/shoes.jpg'),
+  Product(title: 'Hat', image: 'images/hats.jpg'),
+  Product(title: 'Book', image: 'images/books.png'),
+  Product(title: 'Banana', image: 'images/banana.jpg'),
+  Product(title: 'Bag', image: 'images/bag.jpg'),
 ];
 
 class GridItem extends StatelessWidget {
@@ -60,7 +65,7 @@ class GridItem extends StatelessWidget {
   const GridItem({super.key, required this.product});
 
   Color getRandomColor() {
-    Random random = Random(); 
+    Random random = Random();
 
     return Color.fromARGB(
       random.nextInt(255),
@@ -74,13 +79,26 @@ class GridItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       color: getRandomColor(),
-      elevation: 2,
+      elevation: 5,
+      shape: RoundedRectangleBorder(
+        side: BorderSide(color: Theme.of(context).colorScheme.outline),
+        borderRadius: const BorderRadius.all(Radius.circular(12)),
+      ),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(product.title, style: const TextStyle(fontSize: 20)),
-            Text(product.subtitle, style: const TextStyle(fontSize: 15)),
+            Image(
+              image: AssetImage(product.image),
+              width: 125,
+              height: 125,
+              fit: BoxFit.fill,
+            ),
+
+            Text(
+              product.title,
+              style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            ),
           ],
         ),
       ),
