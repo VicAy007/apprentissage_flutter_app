@@ -19,31 +19,6 @@ class ProductsView2 extends StatelessWidget {
   }
 }
 
-final List<Image> images = [
-  const Image(
-    image: AssetImage('images/profiles/Portrait1.png'),
-    fit: BoxFit.cover,
-  ),
-  const Image(
-    image: AssetImage('images/profiles/Portrait2.png'),
-    fit: BoxFit.cover,
-  ),
-  const Image(
-    image: AssetImage('images/profiles/Portrait3.png'),
-    fit: BoxFit.cover,
-  ),
-  const Image(
-    image: AssetImage('images/profiles/Portrait4.png'),
-    fit: BoxFit.cover,
-  ),
-  const Image(
-    image: AssetImage('images/profiles/Portrait5.png'),
-    fit: BoxFit.cover,
-  ),
-];
-
-
-
 class Product {
   final String title;
   final String image;
